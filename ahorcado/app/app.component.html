@@ -1,0 +1,12 @@
+<h1>{{game.getWord() }}</h1>
+<div class="form-group">
+  <p>Guess: 
+    <input class="form-control" type="text" maxlength="1" (keyup)="sendKeyUp()" [(ngModel)]="guess">
+  </p>
+</div>
+
+<p>
+  You are currently guessing: 
+  <code>{{guess}}</code> 
+  <button (click)="makeGuess()" class="btn btn-default pull-right">Make Guess</button>
+</p>
