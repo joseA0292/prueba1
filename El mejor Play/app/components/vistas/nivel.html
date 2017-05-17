@@ -1,0 +1,11 @@
+ 
+
+   <h1>{{ game.getWord() }}</h1>
+   <h2>Pista: {{palabra.pista}}</h2>
+   <h3>Intentos restantes: {{ restantes - game.getWrongs() }}</h3>
+		 <div *ngIf="game.getWrongs()>= restantes"><h1>{{nextLevel(0)}}</h1> </div>
+     <div *ngIf="game.getAst() == false"><h1>{{nextLevel(1)}}</h1> </div>
+    <input class="form-control" type="text" maxlength="1" #pal (keyup)="onKeyUp(pal.value)" [(ngModel)]="guess">
+    <br><br>
+		<button *ngFor="let letter of alphabet" (click)="makeGuess(letter)">{{ letter }}</button>
+
