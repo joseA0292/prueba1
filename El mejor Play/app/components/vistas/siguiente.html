@@ -1,0 +1,23 @@
+    
+
+    <div *ngIf="id == 0">
+        <h1>Has Fallado :(</h1>
+        <h2>Puntos: 0</h2> 
+    </div>
+
+    <div *ngIf="id == 1">
+        <h1>¡Has acertado!</h1>
+        <h2>Puntos:25</h2>
+    </div>
+    <div *ngIf="id == 2">
+        <h1>¡¡¡HAS TERMINADO!!!</h1>
+        <h2>Puntuación: 100</h2>
+        <form (ngSubmit) = "goHome()">
+            <button  type= "submit">Inicio</button>
+        </form>
+    </div>
+    <div *ngIf="id != 2">
+        <form (ngSubmit) = "onSubmit()">
+            <button  type= "submit">Siguiente</button>
+        </form>
+    </div>

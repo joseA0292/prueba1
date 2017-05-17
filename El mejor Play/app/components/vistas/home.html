@@ -1,0 +1,9 @@
+<h1>{{title}}</h1><br><br>
+<div *ngIf="cont==0">
+    <button (click)="getPalabras()">Cargar Juego</button>
+</div>
+<div *ngIf="cont==1">
+    <form  (ngSubmit) = "onSubmit()">
+        <button  type= "submit">Empezar</button>
+    </form>
+</div>
